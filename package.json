@@ -1,8 +1,16 @@
 {
   "name": "userinfo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "cross platform user info",
   "author": "Colin J. Ihrig <cjihrig@gmail.com> (http://www.cjihrig.com/)",
+  "homepage": "https://github.com/cjihrig/userinfo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cjihrig/userinfo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cjihrig/userinfo/issues"
+  },
   "license": "MIT",
   "main": "index.js",
   "engines": {
@@ -18,5 +26,8 @@
   "devDependencies": {
     "code": "1.x.x",
     "lab": "5.x.x"
-  }
+  },
+  "keywords": [
+    "whoami"
+  ]
 }
