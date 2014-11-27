@@ -1,0 +1,22 @@
+{
+  "name": "userinfo",
+  "version": "1.0.0",
+  "description": "cross platform user info",
+  "author": "Colin J. Ihrig <cjihrig@gmail.com> (http://www.cjihrig.com/)",
+  "license": "MIT",
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node node_modules/lab/bin/lab -v -L -t 100",
+    "rebuild": "node-gyp rebuild"
+  },
+  "dependencies": {
+    "nan": "1.x.x"
+  },
+  "devDependencies": {
+    "code": "1.x.x",
+    "lab": "5.x.x"
+  }
+}
