@@ -9,6 +9,7 @@ using namespace v8;
 
 
 NAN_METHOD(WhoAmI);
+NAN_METHOD(GetHomeDirectory);
 void Init(Handle<Object> exports);
 
 

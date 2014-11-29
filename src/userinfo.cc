@@ -10,6 +10,11 @@ void Init(Handle<Object> exports) {
     NanNew("whoami"),
     NanNew<FunctionTemplate>(WhoAmI)->GetFunction()
   );
+
+  exports->Set(
+    NanNew("getHomeDirectory"),
+    NanNew<FunctionTemplate>(GetHomeDirectory)->GetFunction()
+  );
 }
 
 
