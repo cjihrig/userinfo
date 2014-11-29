@@ -21,11 +21,15 @@
     "rebuild": "node-gyp rebuild"
   },
   "dependencies": {
+    "bossy": "1.x.x",
     "nan": "1.x.x"
   },
   "devDependencies": {
     "code": "1.x.x",
     "lab": "5.x.x"
+  },
+  "bin": {
+    "userinfo": "./bin/userinfo"
   },
   "keywords": [
     "whoami"
