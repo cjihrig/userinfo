@@ -1,3 +1,4 @@
+var Fs = require('fs');
 var Code = require('code');
 var Lab = require('lab');
 var UserInfo = require('../');
@@ -20,5 +21,44 @@ describe('UserInfo', function() {
       expect(user.length).to.be.greaterThan(0);
       done();
     });
+  });
+
+  describe('getHomeDirectory()', function() {
+    it('returns the current user\'s home directory', function(done) {
+      expect(function() {
+        var home = UserInfo.getHomeDirectory();
+
+        expect(home).to.be.a.string();
+        expect(Fs.statSync(home).isDirectory()).to.be.true();
+      }).not.to.throw();
+
+      done();
+    });
+
+/* Currently not supporting passing in a username because of Windows
+    it('throws if username is not a string', function(done) {
+      expect(function() {
+        UserInfo.getHomeDirectory();
+      }).to.throw(TypeError);
+
+      expect(function() {
+        UserInfo.getHomeDirectory(1);
+      }).to.throw(TypeError);
+
+      expect(function() {
+        UserInfo.getHomeDirectory(true);
+      }).to.throw(TypeError);
+
+      expect(function() {
+        UserInfo.getHomeDirectory({});
+      }).to.throw(TypeError);
+
+      expect(function() {
+        UserInfo.getHomeDirectory(null);
+      }).to.throw(TypeError);
+
+      done();
+    });
+*/
   });
 });

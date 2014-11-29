@@ -1,5 +1,12 @@
+// Need at least Vista
+#if (_WIN32_WINNT < 0x0600)
+#define _WIN32_WINNT _WIN32_WINNT_VISTA
+#endif
+
+
 #include <lmcons.h>
 #include <nan.h>
+#include <shlobj.h>
 
 
 using namespace v8;
@@ -20,4 +27,34 @@ NAN_METHOD(WhoAmI) {
   }
 
   NanReturnValue(NanNew(buf));
+}
+
+
+NAN_METHOD(GetHomeDirectory) {
+  NanScope();
+
+  wchar_t* path;
+  HRESULT hr = SHGetKnownFolderPath(FOLDERID_Profile, 0, NULL, &path);
+
+  if (hr != S_OK) {
+    char buf[BUFSIZ];
+    FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM, NULL, hr,
+                  MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
+                  buf, UNLEN + 1, NULL);
+    NanThrowError(buf);
+    NanReturnUndefined();
+  }
+
+  size_t len = wcslen((const wchar_t*) path);
+  char* p = (char*) malloc(sizeof(char) * len + 1);
+
+  if (p == NULL) {
+    NanThrowError("out of memory");
+    NanReturnUndefined();
+  }
+
+  int r = wcstombs(p, path, len);
+  p[r] = '\0';
+  CoTaskMemFree(path);
+  NanReturnValue(NanNew(p));
 }
