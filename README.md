@@ -26,3 +26,10 @@ Returns the current username. Calls `GetUserName()` on Windows, and `getlogin_r(
     - string - The current user's home directory.
 
 Returns the current user's home directory. Calls `SHGetKnownFolderPath()` on Windows, and `getlogin_r()` followed by `getpwnam()` otherwise. Throws if the home directory cannot be retrieved.
+
+## Command Line Interface (CLI)
+
+userinfo functionality can be accessed via the command line. The CLI is available using the `userinfo` command. The following command line arguments are valid:
+
+  - `w`, `whoami` - Invokes `whoami()`
+  - `H`, `getHomeDirectory` - Invokes `getHomeDirectory()`

@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var Bossy = require('bossy');
+var UserInfo = require('../');
+
+var definition = {
+  w: {
+    alias: 'whoami',
+    type: 'boolean'
+  },
+  H: {
+    alias: 'getHomeDirectory',
+    type: 'boolean'
+  }
+};
+var argv;
+
+try {
+  argv = Bossy.parse(definition);
+} catch (err) {
+  console.error(Bossy.usage(definition));
+  process.exit(1);
+}
+
+if (argv.w) {
+  console.log(UserInfo.whoami());
+}
+
+if (argv.H) {
+  console.log(UserInfo.getHomeDirectory());
+}
