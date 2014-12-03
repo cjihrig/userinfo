@@ -17,7 +17,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "node node_modules/lab/bin/lab -v -L -t 100",
+    "test": "node node_modules/lab/bin/lab -v -L -t 100 -a code",
     "rebuild": "node-gyp rebuild"
   },
   "dependencies": {
