@@ -1,15 +1,15 @@
 {
   "name": "userinfo",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "cross platform user info",
-  "author": "Colin J. Ihrig <cjihrig@gmail.com> (http://www.cjihrig.com/)",
-  "homepage": "https://github.com/cjihrig/userinfo",
+  "author": "Continuation Labs",
+  "homepage": "https://github.com/continuationlabs/userinfo",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cjihrig/userinfo.git"
+    "url": "https://github.com/continuationlabs/userinfo.git"
   },
   "bugs": {
-    "url": "https://github.com/cjihrig/userinfo/issues"
+    "url": "https://github.com/continuationlabs/userinfo/issues"
   },
   "license": "MIT",
   "main": "index.js",
