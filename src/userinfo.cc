@@ -5,15 +5,15 @@
 using namespace v8;
 
 
-void Init(Handle<Object> exports) {
+void Init(Local<Object> exports) {
   exports->Set(
-    NanNew("whoami"),
-    NanNew<FunctionTemplate>(WhoAmI)->GetFunction()
+    Nan::New("whoami").ToLocalChecked(),
+    Nan::New<FunctionTemplate>(WhoAmI)->GetFunction()
   );
 
   exports->Set(
-    NanNew("getHomeDirectory"),
-    NanNew<FunctionTemplate>(GetHomeDirectory)->GetFunction()
+    Nan::New("getHomeDirectory").ToLocalChecked(),
+    Nan::New<FunctionTemplate>(GetHomeDirectory)->GetFunction()
   );
 }
 

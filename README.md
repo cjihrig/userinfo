@@ -20,12 +20,14 @@ Returns the current username. Calls `GetUserName()` on Windows, and `getlogin_r(
 
 ### `getHomeDirectory()`
 
+  ** Deprecated ** - As of Node/io.js v2.3.0, `os.homedir()` provides this functionality.
+
   - Arguments
     - None
   - Returns
     - string - The current user's home directory.
 
-Returns the current user's home directory. Calls `SHGetKnownFolderPath()` on Windows, and `getlogin_r()` followed by `getpwnam()` otherwise. Throws if the home directory cannot be retrieved.
+Returns the current user's home directory. Calls `SHGetKnownFolderPath()` on Windows, and `getlogin_r()` followed by `getpwnam()` otherwise. Throws if the home directory cannot be retrieved. Currently, only the current user's home directory can be retrieved, due to Windows limitations.
 
 ## Command Line Interface (CLI)
 

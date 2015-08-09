@@ -2,6 +2,7 @@
   "targets": [
     {
       "target_name": "userinfo",
+      "win_delay_load_hook": "false",
       "sources": [
         "src/userinfo.cc"
       ],

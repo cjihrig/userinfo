@@ -8,9 +8,9 @@
 using namespace v8;
 
 
-NAN_METHOD(WhoAmI);
-NAN_METHOD(GetHomeDirectory);
-void Init(Handle<Object> exports);
+void WhoAmI(const Nan::FunctionCallbackInfo<Value>& info);
+void GetHomeDirectory(const Nan::FunctionCallbackInfo<Value>& info);
+void Init(Local<Object> exports);
 
 
 #endif
