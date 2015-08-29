@@ -21,7 +21,7 @@
     "rebuild": "node-gyp rebuild"
   },
   "dependencies": {
-    "bossy": "1.x.x",
+    "bossy": "2.x.x",
     "nan": "2.x.x"
   },
   "devDependencies": {
