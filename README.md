@@ -20,7 +20,7 @@ Returns the current username. Calls `GetUserName()` on Windows, and `getlogin_r(
 
 ### `getHomeDirectory()`
 
-  ** Deprecated ** - As of Node/io.js v2.3.0, `os.homedir()` provides this functionality.
+  **Deprecated** - As of Node/io.js v2.3.0, `os.homedir()` provides this functionality.
 
   - Arguments
     - None
