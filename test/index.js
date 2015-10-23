@@ -1,3 +1,4 @@
+'use strict';
 var Fs = require('fs');
 var Code = require('code');
 var Lab = require('lab');
