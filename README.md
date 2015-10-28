@@ -3,7 +3,6 @@
 [![Current Version](https://img.shields.io/npm/v/userinfo.svg)](https://www.npmjs.org/package/userinfo)
 [![Build Status via Travis CI](https://travis-ci.org/continuationlabs/userinfo.svg?branch=master)](https://travis-ci.org/continuationlabs/userinfo)
 ![Dependencies](http://img.shields.io/david/continuationlabs/userinfo.svg)
-![devDependencies](http://img.shields.io/david/dev/continuationlabs/userinfo.svg)
 
 Node.js native addon for working with user information
 
